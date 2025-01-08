@@ -7,6 +7,10 @@ export const routes: Routes = [
     component: ProductComponent
   },
   {
+    path: 'products/:id',
+    loadComponent: () => import('./pages/products/show-product/show-product.component').then( c => c.ShowProductComponent )
+  },
+  {
     path: '**',
     redirectTo: ''
   }

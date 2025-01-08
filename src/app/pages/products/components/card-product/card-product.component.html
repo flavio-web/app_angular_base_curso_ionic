@@ -1,0 +1,22 @@
+<div class="card">
+  <img [src]="product().image" class="card-img-top img-product" alt="Product Image">
+  <div class="card-body">
+    <h5 class="card-title">{{ product().title }}</h5>
+    <p class="card-text">{{ product().category }}</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="h5 mb-0">${{ product().price }}</span>
+      <div>
+        <i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star-half-stroke text-warning"></i>
+        <small class="text-muted">({{ product().rating.rate }})</small>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer d-flex justify-content-between bg-light">
+    <button class="btn btn-primary btn-sm" [routerLink]="[ '/products', product().id ]" >Detalle</button>
+    <button class="btn btn-outline-danger btn-sm"><i class="fa-regular fa-heart"></i></button>
+  </div>
+</div>
